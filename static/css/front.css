@@ -1,0 +1,276 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  /* background: url('pxfuel.jpg'); */
+  background-color: #74707041;
+  /* height: 100%; */
+  overflow: hidden;
+  height: 100vh;
+  overflow-y: auto;
+  margin: 0;
+  /* padding: 10px; */
+}
+
+.header{
+background: #04394b;
+position: fixed;
+top: 0;
+width: 100%;
+height: 100px;
+overflow: hidden;
+
+}
+
+.left {
+  position: absolute;
+  top: 18px;
+  display: inline-block;
+  left: 30px;
+  border: 0px solid white
+}
+
+.left img {
+  width: 70px;
+  height: 50px;
+  /* filter: invert(100%); */
+  text-align: center;
+  border-radius: 50%;
+  
+}
+
+.left div {
+  text-align: center;
+  color: white;
+}
+.left div:hover{
+  font-family: cursive;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.mid {
+  position: sticky;
+  display: block;
+  width: 50%;
+  margin: 18px auto;
+  top: 18px;
+  border-radius: 10px;
+
+}
+
+.right {
+  position: absolute;
+  top: 18px;
+  display: inline-block;
+  right: 30px;
+  margin-top: 20px;
+
+}
+
+.navbar {
+  display: inline-block;
+ border-radius: 10px;
+}
+
+.navbar li {
+  display: inline-block;
+  color: white;
+  margin: 13px 10px;
+  border-radius: 30px;
+}
+
+.navbar li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: cursive;
+  /* border: 2px solid black; */
+  border-radius: 4px;
+}
+
+.navbar li a:hover {
+  color: cyan;
+  text-decoration: dotted;
+}
+
+.btn {
+  margin: 0px 6px;
+  padding: 2px 8px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover{
+  font-weight: bold;
+  background-color: beige;
+}
+.container{
+  width: 50%;
+  color: white;
+  margin-top: 150px;
+  font-size: xx-large;
+  font-family: cursive;
+  /* background: url('/static/image/text\ image.jpg'); */
+  background-image: linear-gradient(to right,#FF9933,#524ca4,#00ff00, #FF9933,#f0ecec,#00ff00);
+  /* background-size: cover; */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+
+.chart{
+  float: left;
+  margin: 20px;
+}
+.data img{
+float: left;
+height: 450px;
+width: 700px;
+padding-left: 20px;
+padding-top: 30px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Karla");
+* {
+box-sizing: border-box;
+}
+
+::selection {
+background: #fd0;
+color: #222;
+}
+
+br {
+font-size: 0;
+}
+
+/* body {
+font-family: "Karla", sans-serif;
+margin: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+font-size: 16px;
+background-color: #ddd;
+} */
+.chat-box {
+float: right;
+margin-right: 20px;
+margin-top: 20px;
+width: 400px;
+height: 500px;
+background-color: #eee;
+border-radius: 16px 16px 5px 5px;
+overflow: hidden;
+border: 1px rgb(129, 16, 243) solid;
+}
+.chat-box header {
+background-color: #050936;
+color: #fff;
+display: flex;
+padding: 0 16px;
+}
+.chat-box header > * {
+line-height: 40px;
+margin-top: 10px;
+margin-right: 5px;
+}
+
+.chat-box header img{
+border-radius: 50%;
+margin-bottom: 10px;
+margin-right: 10px;
+}
+.chat-box header h1 {
+margin: 0;
+font-size: 1.1em;
+}
+.chat-box header .close-button {
+cursor: pointer;
+user-select: none;
+}
+.chat-box section {
+overflow-y: scroll;
+overflow-x: hidden;
+height: calc(100% - 40px - 40px);
+padding: 12px;
+}
+.chat-box section div {
+margin: 12px 0;
+}
+.chat-box section span {
+display: inline-block;
+padding: 6px 8px;
+margin: 1px 0;
+max-width: 90%;
+word-wrap: break-word;
+}
+.chat-box section div.me {
+text-align: right;
+}
+.chat-box section div.me span {
+background-color: rgb(90, 125, 196);
+border-radius: 4px 16px 16px 4px;
+}
+.chat-box section div.me span:first-of-type {
+border-top-left-radius: 16px;
+}
+.chat-box section div.me span:last-of-type {
+border-bottom-left-radius: 16px;
+}
+.chat-box section div.not-me {
+text-align: left;
+}
+.chat-box section div.not-me span {
+background-color: #bcf;
+border-radius: 16px 4px 4px 16px;
+}
+.chat-box section div.not-me span:first-of-type {
+border-top-right-radius: 16px;
+}
+.chat-box section div.not-me span:last-of-type {
+border-bottom-right-radius: 16px;
+}
+.chat-box footer input {
+font-family: "Karla", sans-serif;
+outline: 0;
+padding: 0 12px;
+height: 40px;
+width: 100%;
+font-size: 1em;
+}
+
+
+.chart{
+.charts-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#chart-container {
+  height: 300px;
+  /* Additional styles for your chart container */
+}
+}

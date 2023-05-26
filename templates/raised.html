@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goverment info</title>
+    <link rel="stylesheet" href="/static/css/raised.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="/static/image/logo.jpg">
+            <div class="gaming">Gov-Connect</div>
+        </div>
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/raised">Raised Ques</a></li>
+                <li><a href="/dept">Departments</a></li>
+                <li><a href="/aboutus/">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+            <button class="btn" id="btn1"><a href="/login/">Log In</a></button>
+        </div>
+    </header>
+
+    
+        <table class="table table-striped table-lg">
+            <h1><caption>Raised Questions : </caption></h1>
+            <thead>
+              <tr>
+                <th scope="col">SNo</th>
+                <th scope="col">Que</th>
+                <th scope="col">Ans</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for qa in qa %}
+              <tr>
+                <th scope="row">{{qa.SNo}}</th>
+                <td>{{qa.que}}</td>
+                <td>{{qa.dept}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    
+    </body>
+    </html>

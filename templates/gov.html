@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <title>Goverment info</title>
+    <link rel="stylesheet" href="/static/css/gov.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="/static/image/logo.jpg">
+            <div class="gaming">Gov-Connect</div>
+        </div>
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="/admin_index">Home</a></li>
+                <li><a href="/gov">Raised Ques</a></li>
+                <li><a href="/dept">Departments</a></li>
+                <li><a href="/admin_aboutus/">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+            <button class="btn" id="btn1"><a href="/">Log out</a></button>
+        </div>
+    </header>
+
+    
+
+
+    <div class="container">
+        <div class="box">
+            <h2>Question Answer form</h2>
+            {% for qa in qa %}
+            <form method="POST" action="/gov_data/{{qa.dept}}">{% csrf_token %}
+                <div class="form-group">
+                    <label for="dept">Department : {{qa.dept}}</label><input type="hidden" name="dept" id="dept" value="{{qa.dept}}"><br/>
+                    <label for="que">Que: {{qa.que}}</label><input type="hidden" name="que" id="que" value="{{qa.que}}">
+                    <input type="text" id="answer" name="answer" placeholder="Enter the answer" class="form-control"><br/>
+                </div>
+                <button type="submit" class="btn btn-primary" value="{{qa.dept}}">Submit</button>
+            </form>
+            {% endfor %}
+        </div>
+
+    </div>
+</body>
+
+</html>
